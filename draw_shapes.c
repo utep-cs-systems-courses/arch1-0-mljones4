@@ -27,10 +27,10 @@ void print_triangle(int leftCol, int size)
 }
 
 void print_arrow(int leftCol, int size){
-  print_triangle(leftCol, size);
+  print_triangle(leftCol, size); //First, draw triangle using above method.
   int i, j;
   int endCol = leftCol + size;
-  for (int row = 0; row < size; row++){
+  for (int row = 0; row < size; row++){ //Then, draw square under center of triangle.
     int col;
     for (col = 0; col < leftCol/2+size; col++) putchar(' ');
     for (       ; col < endCol+size-1;  col++) putchar('*');
